@@ -30,8 +30,11 @@ def iou(box1, box2):
     yi = min(y_a_max, y_b_max)
 
     # calculate area of insection.
-    width = xi - x0
-    height = yi - y0
+    # if A and B has no insection, width and height return 0.
+    # if A and B is overfitting, width and height return 1.
+    width = max(xi - x0 + 1, 0)
+    height = max(yi - y0 + 1, 0)
+
 
     area_insection = width*height
 
