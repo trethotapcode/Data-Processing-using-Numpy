@@ -35,3 +35,5 @@ for i in range(len(la)):
         for k in range(len(la[0])):
             result[i][j] += la[i][k] * lb[k][j]
 print("result of multiplying a and b using List:\n", result)
+
+
